@@ -7,7 +7,9 @@ Resources:
     Properties:
       Handler: index.handler
       Runtime: nodejs6.10
-      CodeUri: ./
+      Environment:
+        Variables:
+          S3_BUCKET: lambdanodejstestbucket1
       Events:
         MyTimeApi:
           Type: Api
